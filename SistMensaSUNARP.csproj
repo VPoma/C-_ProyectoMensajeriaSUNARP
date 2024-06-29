@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3563123-AB72-4CE7-9CCA-9ECFFB45D7CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistMensaSUNARP</RootNamespace>
+    <AssemblyName>SistMensaSUNARP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarConsolidado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarConsolidado.Designer.cs">
+      <DependentUpon>AgregarConsolidado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusquedaCargosRet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaCargosRet.Designer.cs">
+      <DependentUpon>BusquedaCargosRet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexion.cs" />
+    <Compile Include="DataSetReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Destinos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Destinos.Designer.cs">
+      <DependentUpon>Destinos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnvioExterno.Designer.cs">
+      <DependentUpon>EnvioExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioInterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnvioInterno.Designer.cs">
+      <DependentUpon>EnvioInterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImpEtiquetaConsolidado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImpEtiquetaConsolidado.Designer.cs">
+      <DependentUpon>ImpEtiquetaConsolidado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImpListEnvioExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImpListEnvioExterno.Designer.cs">
+      <DependentUpon>ImpListEnvioExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImpListEnvioInterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImpListEnvioInterno.Designer.cs">
+      <DependentUpon>ImpListEnvioInterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListEnvios.Designer.cs">
+      <DependentUpon>ListEnvios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lugar.Designer.cs">
+      <DependentUpon>Lugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oficina.Designer.cs">
+      <DependentUpon>Oficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Portador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Portador.Designer.cs">
+      <DependentUpon>Portador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pp.Designer.cs">
+      <DependentUpon>pp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ppfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ppfe.Designer.cs">
+      <DependentUpon>ppfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuitarConsolidado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuitarConsolidado.Designer.cs">
+      <DependentUpon>QuitarConsolidado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegCargosC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegCargosC.Designer.cs">
+      <DependentUpon>RegCargosC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegEnvioArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegEnvioArea.Designer.cs">
+      <DependentUpon>RegEnvioArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteMensual.Designer.cs">
+      <DependentUpon>ReporteMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePorMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePorMes.Designer.cs">
+      <DependentUpon>ReportePorMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SistMnsjSUNARPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistMnsjSUNARPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoDocumento.Designer.cs">
+      <DependentUpon>TipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xyzConsulta.cs" />
+    <EmbeddedResource Include="AgregarConsolidado.resx">
+      <DependentUpon>AgregarConsolidado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusquedaCargosRet.resx">
+      <DependentUpon>BusquedaCargosRet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destinos.resx">
+      <DependentUpon>Destinos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvioExterno.resx">
+      <DependentUpon>EnvioExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvioInterno.resx">
+      <DependentUpon>EnvioInterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtiquetaConsolidado.rdlc" />
+    <EmbeddedResource Include="ImpEtiquetaConsolidado.resx">
+      <DependentUpon>ImpEtiquetaConsolidado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImpListEnvioExterno.resx">
+      <DependentUpon>ImpListEnvioExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImpListEnvioInterno.resx">
+      <DependentUpon>ImpListEnvioInterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListEnvios.resx">
+      <DependentUpon>ListEnvios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lugar.resx">
+      <DependentUpon>Lugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oficina.resx">
+      <DependentUpon>Oficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portador.resx">
+      <DependentUpon>Portador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pp.resx">
+      <DependentUpon>pp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ppfe.resx">
+      <DependentUpon>ppfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuitarConsolidado.resx">
+      <DependentUpon>QuitarConsolidado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegCargosC.resx">
+      <DependentUpon>RegCargosC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegEnvioArea.resx">
+      <DependentUpon>RegEnvioArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteListEnvioExterno.rdlc" />
+    <EmbeddedResource Include="ReporteListEnvioInterno.rdlc" />
+    <EmbeddedResource Include="ReporteMensual.resx">
+      <DependentUpon>ReporteMensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePorMes.rdlc" />
+    <EmbeddedResource Include="ReportePorMes.resx">
+      <DependentUpon>ReportePorMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoDocumento.resx">
+      <DependentUpon>TipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetReportes.xsc">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetReportes.xss">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SistMnsjSUNARPDataSet.xsc">
+      <DependentUpon>SistMnsjSUNARPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistMnsjSUNARPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistMnsjSUNARPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistMnsjSUNARPDataSet.xss">
+      <DependentUpon>SistMnsjSUNARPDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NuevologoSunarp.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
